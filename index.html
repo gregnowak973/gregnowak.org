@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greg Nowak — Principal Analytical Consultant, Google</title>
+<meta name="description" content="Greg Nowak is a Principal Analytical Consultant at Google in New York — a data science and GTM leader focused on AI value creation, causal inference, and business expansion.">
+<link rel="canonical" href="https://gregnowak.org/">
+<meta property="og:title" content="Greg Nowak">
+<meta property="og:description" content="Principal Analytical Consultant at Google · Value creation & business expansion · Princeton, NYU CS">
+<meta property="og:url" content="https://gregnowak.org/">
+<meta property="og:type" content="profile">
+<meta property="og:image" content="https://gregnowak.org/headshot.jpeg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf9f6; --surface:#ffffff; --ink:#1a1c1e; --muted:#5c6166;
+    --line:#e6e2da; --accent:#0b57d0; --accent-ink:#0b57d0; --chip:#eef3fc;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#111315; --surface:#191c1f; --ink:#e8eaed; --muted:#9aa0a6;
+      --line:#2a2e33; --accent:#8ab4f8; --accent-ink:#a8c7fa; --chip:#1e2836;
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    font-size:16.5px; line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent-ink); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:880px; margin:0 auto; padding:0 24px}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif; font-weight:600; letter-spacing:-.01em}
+
+  /* Nav */
+  nav{position:sticky; top:0; z-index:10; background:color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; height:60px}
+  nav .brand{font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:1.05rem; color:var(--ink)}
+  nav ul{display:flex; gap:22px; list-style:none}
+  nav ul a{color:var(--muted); font-size:.9rem; font-weight:500}
+  nav ul a:hover{color:var(--ink); text-decoration:none}
+  @media (max-width:640px){ nav ul{display:none} }
+
+  /* Hero */
+  header{padding:84px 0 64px}
+  .hero{display:flex; gap:44px; align-items:center; flex-wrap:wrap}
+  .hero img{width:168px; height:168px; border-radius:50%; object-fit:cover; border:1px solid var(--line); box-shadow:0 12px 32px rgba(0,0,0,.10)}
+  .hero h1{font-size:clamp(2.3rem,6vw,3.2rem); line-height:1.1; margin-bottom:12px}
+  .kicker{color:var(--accent-ink); font-weight:600; font-size:.85rem; letter-spacing:.14em; text-transform:uppercase; margin-bottom:14px}
+  .hero p.tag{color:var(--muted); font-size:1.12rem; max-width:34em}
+  .cta{display:flex; gap:12px; margin-top:26px; flex-wrap:wrap}
+  .btn{display:inline-block; padding:10px 20px; border-radius:999px; font-weight:600; font-size:.92rem; border:1px solid var(--line)}
+  .btn.primary{background:var(--accent); color:#fff; border-color:var(--accent)}
+  .btn.primary:hover{opacity:.9; text-decoration:none}
+  .btn.ghost{color:var(--ink)}
+  .btn.ghost:hover{border-color:var(--muted); text-decoration:none}
+
+  /* Sections */
+  section{padding:56px 0; border-top:1px solid var(--line)}
+  h2{font-size:1.7rem; margin-bottom:28px}
+  .lede{font-size:1.08rem; max-width:44em}
+  .lede + .lede{margin-top:16px}
+
+  /* Stats */
+  .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin-top:36px}
+  .stat{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:20px 22px}
+  .stat b{display:block; font-family:'Fraunces',Georgia,serif; font-size:1.65rem; font-weight:600; margin-bottom:2px}
+  .stat span{color:var(--muted); font-size:.88rem}
+
+  /* Timeline */
+  .role{display:grid; grid-template-columns:150px 1fr; gap:24px; padding:26px 0; border-bottom:1px solid var(--line)}
+  .role:last-child{border-bottom:none}
+  .role .when{color:var(--muted); font-size:.88rem; padding-top:4px}
+  .role h3{font-size:1.13rem; margin-bottom:2px}
+  .role .org{color:var(--muted); font-size:.92rem; margin-bottom:10px}
+  .role ul{margin:10px 0 0 18px; color:var(--ink)}
+  .role li{margin-bottom:8px; font-size:.97rem}
+  .role p{font-size:.97rem; color:var(--ink)}
+  @media (max-width:640px){ .role{grid-template-columns:1fr; gap:4px} }
+
+  /* Cards */
+  .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px}
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:24px}
+  .card h3{font-size:1.08rem; margin-bottom:8px}
+  .card p{color:var(--muted); font-size:.94rem}
+
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+  .chip{background:var(--chip); color:var(--accent-ink); border-radius:999px; padding:4px 12px; font-size:.8rem; font-weight:500}
+
+  /* Education */
+  .edu{display:flex; justify-content:space-between; gap:16px; padding:16px 0; border-bottom:1px solid var(--line); flex-wrap:wrap}
+  .edu:last-child{border-bottom:none}
+  .edu b{font-weight:600}
+  .edu .sub{color:var(--muted); font-size:.92rem}
+  .edu .yr{color:var(--muted); font-size:.9rem; white-space:nowrap}
+
+  footer{border-top:1px solid var(--line); padding:48px 0 64px; text-align:center}
+  footer h2{margin-bottom:10px}
+  footer p{color:var(--muted); max-width:36em; margin:0 auto 22px}
+  footer .fine{font-size:.82rem; margin-top:40px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="brand">Greg Nowak</span>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#building">Building</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="wrap">
+  <div class="hero">
+    <img src="headshot.jpeg" alt="Headshot of Greg Nowak">
+    <div>
+      <div class="kicker">New York, NY</div>
+      <h1>Greg Nowak</h1>
+      <p class="tag">Principal Analytical Consultant at Google. I help the world's largest companies prove and capture value from AI — through causal inference, LTV modeling, and go-to-market engines that scale.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://www.linkedin.com/in/greg-nowak973" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <a class="btn ghost" href="Greg-Nowak-Resume.pdf" target="_blank">Resume</a>
+        <a class="btn ghost" href="mailto:greg.nowak973@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="wrap">
+  <h2>About</h2>
+  <p class="lede">I'm a data science and go-to-market leader with a decade-long track record of bridging rigorous statistical analysis with commercial execution. I built my foundation designing experiments as a neuroscience researcher at Princeton, and today I apply that same scientific rigor to help Google's largest customers grow.</p>
+  <p class="lede">At Google, I founded and lead the Category Expansion Center of Excellence — showing CMOs and CEOs how and where to execute multi-million-dollar expansion initiatives — and lead AI value creation for Fortune 500 brands, building the ROI models and causal experiments that turn AI pilots into deployed, revenue-generating systems.</p>
+  <div class="stats">
+    <div class="stat"><b>$300M+</b><span>new category revenue unlocked for Google in 2025</span></div>
+    <div class="stat"><b>200+</b><span>enterprise companies equipped with value-selling motions</span></div>
+    <div class="stat"><b>10+</b><span>causal inference experiments led with F500 companies in the last 6 months</span></div>
+    <div class="stat"><b>7 yrs</b><span>at Google across Ads, Cloud, and CapitalG</span></div>
+  </div>
+</section>
+
+<section id="experience" class="wrap">
+  <h2>Experience</h2>
+
+  <div class="role">
+    <div class="when">May 2025 – Present</div>
+    <div>
+      <h3>Principal Analytical Consultant II, Head of Category Expansion</h3>
+      <div class="org">Google · New York</div>
+      <p>A role created for me at Google: translating macroeconomic and LTV consumer shifts into profitable category-expansion strategies for CMOs and CEOs.</p>
+      <ul>
+        <li>Founded and scaled the Category Expansion Center of Excellence across multiple verticals — unlocking $300M+ in new category revenue in 2025 and operationalizing a GTM engine targeting $600M+ in 2026.</li>
+        <li>Designed and deployed scaled value-selling motions and opportunity-sizing tools for account teams covering 200+ enterprise companies.</li>
+        <li>Co-built LLM-powered analytics tooling on Gemini that automated search-term taxonomy and category-gap analysis, cutting manual analyst workload ~90%.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role">
+    <div class="when">Jan 2025 – Feb 2026</div>
+    <div>
+      <h3>Principal, AI Value Creation — Cloud</h3>
+      <div class="org">Google · New York</div>
+      <p>Led AI value creation for Fortune 500 and category-leading brands across pharma, insurance, retail, and media — building the ROI/TCO models and business cases behind enterprise Gemini and Google Cloud deployments.</p>
+      <ul>
+        <li>Built a multi-year ROI/TCO model for an MLB Vertex AI Site Search &amp; Browse deployment, projecting up to 2.5x ROI.</li>
+        <li>Led a Gemini Enterprise deal cycle end-to-end to bring a novel GenAI video agent to market for a major travel brand — 67,000+ conversions and a $400K pilot commitment.</li>
+        <li>Lead author on a first-of-its-kind Google benchmark establishing that AI-generated video ads can perform ROI-positive versus traditional production.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role">
+    <div class="when">Sep 2022 – May 2025</div>
+    <div>
+      <h3>Principal Analytical Consultant, Top Accounts</h3>
+      <div class="org">Google · New York</div>
+      <ul>
+        <li>Led executive AI summits and innovation labs, operationalizing AI pilots projected to deliver $56M in customer value across research synthesis, trend spotting, and ad copy optimization.</li>
+        <li>Built predictive-LTV (BigQuery ML) and value-based media-buying programs — driving an 89% conversion-rate lift and +54% premium subscriber growth for Care.com, and $6M in incremental profit for Turo.</li>
+        <li>Selected as Google's first IC Mastery Coach; delivered 20+ sales enablement sessions at 100% CSAT.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role">
+    <div class="when">Mar 2024 – Jul 2024</div>
+    <div>
+      <h3>GTM Lead, VCs and Startups</h3>
+      <div class="org">Google · São Paulo, Brazil</div>
+      <ul>
+        <li>Selected for a competitive global rotation to build a scaled VC channel in Brazil.</li>
+        <li>Delivered 14 growth workshops for 13 high-potential startups in 6 weeks — $5.9M in new pipeline at a 94 NPS.</li>
+        <li>Delivered "Building Your AI Growth Machine," a featured talk at Valor, to Brazilian founders and C-level operators.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role">
+    <div class="when">Sep 2021 – Oct 2022</div>
+    <div>
+      <h3>Advisor</h3>
+      <div class="org">CapitalG · New York</div>
+      <p>Led startup advisory and launched the Ads@CapitalG accelerator program for Google's growth-stage venture arm — driving 95% QoQ conversion growth for accelerator participants.</p>
+    </div>
+  </div>
+
+  <div class="role">
+    <div class="when">Sep 2019 – Sep 2022</div>
+    <div>
+      <h3>Senior Analytical Consultant, Top Accounts</h3>
+      <div class="org">Google · New York</div>
+      <ul>
+        <li>Supported Match.com and Vimeo executives through their IPOs and Angi through a multi-brand consolidation.</li>
+        <li>Delivered marketing technology for a home-services leader that drove $10M+ in annual EBITDA gains.</li>
+        <li>Designed causal experiments (geo-tests, incrementality studies), including a Google-wide meta-study with 15+ enterprise brands.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role">
+    <div class="when">2017 – 2019</div>
+    <div>
+      <h3>Growth Product Manager · Paid Search Lead</h3>
+      <div class="org">Jet.com · Hoboken, NJ</div>
+      <p>Owned the acquisition-tech product roadmap and paid-search strategy — launching products and quantitative tests to optimize user acquisition, LTV, and marketing-stack ROI.</p>
+    </div>
+  </div>
+
+  <div class="role">
+    <div class="when">2015 – 2017</div>
+    <div>
+      <h3>Neuroscience Research Specialist</h3>
+      <div class="org">Princeton University</div>
+      <p>Conducted neuroscience research — building the foundation for a data-driven, experimental approach to decision-making under uncertainty.</p>
+    </div>
+  </div>
+</section>
+
+<section id="building" class="wrap">
+  <h2>Building</h2>
+  <p class="lede" style="margin-bottom:28px">Outside of Google, I'm an engineer at heart — I write production SQL and Python, and I ship independent products.</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Trading Application — 1K+ DAUs</h3>
+      <p>Built and sold a trading application that grew to over 1,000 daily active users — real-time market levels for futures and equities traders.</p>
+    </div>
+    <div class="card">
+      <h3>Quantitative Trading Research</h3>
+      <p>Building an automated backtesting and strategy-research engine for futures markets, with nightly cloud verification runs and pre-registered experiments.</p>
+    </div>
+    <div class="card">
+      <h3>Data Platform</h3>
+      <p>Developing a data platform with OAuth-based API integrations and automated test coverage — bringing production engineering rigor to independent work.</p>
+    </div>
+  </div>
+  <div class="chips">
+    <span class="chip">Python</span><span class="chip">SQL / BigQuery</span><span class="chip">Causal Inference</span>
+    <span class="chip">LTV Modeling</span><span class="chip">Vertex AI</span><span class="chip">Gemini</span>
+    <span class="chip">ROI / TCO Modeling</span><span class="chip">Experimentation</span><span class="chip">GTM Strategy</span>
+  </div>
+</section>
+
+<section id="education" class="wrap">
+  <h2>Education</h2>
+  <div class="edu">
+    <div><b>Princeton University</b><div class="sub">B.A. Molecular Biology, Neuroscience research focus</div></div>
+    <div class="yr">2011 – 2015</div>
+  </div>
+  <div class="edu">
+    <div><b>New York University</b><div class="sub">Graduate coursework in Computer Science — Operating Systems, Networks, Algorithms, Programming Languages</div></div>
+    <div class="yr">2018 – 2020</div>
+  </div>
+  <div class="edu">
+    <div><b>The Wharton School, University of Pennsylvania</b><div class="sub">Certification in Private Equity — LBO modeling, DCF valuation, QoE analysis</div></div>
+    <div class="yr">2026</div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <p>The best way to reach me is email or LinkedIn. Always happy to talk AI value creation, experimentation, growth strategy, or markets.</p>
+    <div class="cta" style="justify-content:center">
+      <a class="btn primary" href="mailto:greg.nowak973@gmail.com">greg.nowak973@gmail.com</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/greg-nowak973" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="fine">© 2026 Greg Nowak · gregnowak.org</p>
+  </div>
+</footer>
+
+</body>
+</html>
