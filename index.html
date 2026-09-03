@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Greg Nowak — Principal Analytical Consultant, Google</title>
-<meta name="description" content="Greg Nowak is a Principal Analytical Consultant at Google in New York — a data science and GTM leader focused on AI value creation, causal inference, and business expansion.">
+<title>Greg Nowak</title>
+<meta name="description" content="Greg Nowak — Principal Analytical Consultant at Google. I help Google Cloud's largest customers figure out where AI, media, and technology actually create value, then build the analytical machinery to prove it and scale it.">
 <link rel="canonical" href="https://gregnowak.org/">
 <meta property="og:title" content="Greg Nowak">
 <meta property="og:description" content="Principal Analytical Consultant at Google · Value creation & business expansion · Princeton, NYU CS">
@@ -67,35 +67,27 @@
   .lede{font-size:1.08rem; max-width:44em}
   .lede + .lede{margin-top:16px}
 
-  /* Stats */
-  .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin-top:36px}
-  .stat{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:20px 22px}
-  .stat b{display:block; font-family:'Fraunces',Georgia,serif; font-size:1.65rem; font-weight:600; margin-bottom:2px}
-  .stat span{color:var(--muted); font-size:.88rem}
-
-  /* Timeline */
-  .role{display:grid; grid-template-columns:150px 1fr; gap:24px; padding:26px 0; border-bottom:1px solid var(--line)}
-  .role:last-child{border-bottom:none}
-  .role .when{color:var(--muted); font-size:.88rem; padding-top:4px}
-  .role h3{font-size:1.13rem; margin-bottom:2px}
-  .role .org{color:var(--muted); font-size:.92rem; margin-bottom:10px}
-  .role ul{margin:10px 0 0 18px; color:var(--ink)}
-  .role li{margin-bottom:8px; font-size:.97rem}
-  .role p{font-size:.97rem; color:var(--ink)}
-  @media (max-width:640px){ .role{grid-template-columns:1fr; gap:4px} }
+  /* Story timeline */
+  .story{display:grid; grid-template-columns:150px 1fr; gap:24px; padding:26px 0; border-bottom:1px solid var(--line)}
+  .story:last-child{border-bottom:none}
+  .story .when{color:var(--muted); font-size:.88rem; padding-top:4px}
+  .story h3{font-size:1.13rem; margin-bottom:2px}
+  .story .org{color:var(--muted); font-size:.92rem; margin-bottom:10px}
+  .story p{font-size:.99rem; color:var(--ink); max-width:40em}
+  .story p + p{margin-top:10px}
+  @media (max-width:640px){ .story{grid-template-columns:1fr; gap:4px} }
 
   /* Cards */
   .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px}
   .card{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:24px}
   .card h3{font-size:1.08rem; margin-bottom:8px}
+  .card .status{display:inline-block; background:var(--chip); color:var(--accent-ink); border-radius:999px; padding:3px 12px; font-size:.75rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase; margin-bottom:12px}
   .card p{color:var(--muted); font-size:.94rem}
-
-  .card .metric{display:block; font-family:'Fraunces',Georgia,serif; font-size:1.5rem; font-weight:600; color:var(--accent-ink); margin-bottom:6px}
-  .card.quote p{color:var(--ink); font-size:.97rem; font-style:italic; margin-bottom:16px}
+  .card.quote p{color:var(--ink); font-size:.96rem; font-style:italic; margin-bottom:16px}
   .card.quote .attrib b{display:block; font-size:.95rem}
   .card.quote .attrib span{color:var(--muted); font-size:.85rem}
 
-  .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:24px}
   .chip{background:var(--chip); color:var(--accent-ink); border-radius:999px; padding:4px 12px; font-size:.8rem; font-weight:500}
 
   /* Education */
@@ -118,9 +110,8 @@
     <span class="brand">Greg Nowak</span>
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#experience">Experience</a></li>
       <li><a href="#building">Building</a></li>
+      <li><a href="#journey">Journey</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -131,9 +122,9 @@
   <div class="hero">
     <img src="headshot.jpeg" alt="Headshot of Greg Nowak">
     <div>
-      <div class="kicker">New York, NY</div>
+      <div class="kicker">Principal Analytical Consultant · Google · New York</div>
       <h1>Greg Nowak</h1>
-      <p class="tag">Principal Analytical Consultant at Google. I help the world's largest companies prove and capture value from AI — through causal inference, LTV modeling, and go-to-market engines that scale.</p>
+      <p class="tag">I help Google Cloud's largest customers figure out where AI, media, and technology actually create value — then build the analytical machinery to prove it and scale it.</p>
       <div class="cta">
         <a class="btn primary" href="https://www.linkedin.com/in/greg-nowak973" target="_blank" rel="noopener">Connect on LinkedIn</a>
         <a class="btn ghost" href="Greg-Nowak-Resume.pdf" target="_blank">Resume</a>
@@ -145,172 +136,66 @@
 
 <section id="about" class="wrap">
   <h2>About</h2>
-  <p class="lede">I help Google Cloud's largest customers figure out where AI, media, and technology actually create value, then build the analytical machinery to prove it and scale it.</p>
-  <p class="lede">Over seven years at Google across Ads and Cloud, I've built the models, frameworks, and pipelines that turn ambiguous business questions into decisions leaders can act on. Whether it's launching a scaled GTM strategy or driving client growth through adoption of a new AI technology, my job is to help businesses grow, and to show the numbers behind it.</p>
+  <p class="lede">Over seven years at Google across Ads and Cloud, I've built the models, frameworks, and pipelines that turn ambiguous business questions into decisions leaders can act on. Whether it's launching a scaled GTM strategy or driving client growth through adoption of a new AI technology, my job is to help businesses grow — and to show the numbers behind it.</p>
   <p class="lede">My background is a mix: neuroscience at Princeton taught me to reason from data; graduate CS coursework at NYU and a Wharton PE certificate added the engineering and capital-allocation lenses. Outside work I run a live quantitative trading system and build GCP-native SaaS, because the fastest way to understand a technology is to ship something with it.</p>
-  <div class="stats">
-    <div class="stat"><b>$300M+</b><span>new category revenue unlocked for Google in 2025</span></div>
-    <div class="stat"><b>200+</b><span>enterprise companies equipped with value-selling motions</span></div>
-    <div class="stat"><b>10+</b><span>causal inference experiments led with F500 companies in the last 6 months</span></div>
-    <div class="stat"><b>7 yrs</b><span>at Google across Ads, Cloud, and CapitalG</span></div>
-  </div>
-</section>
-
-<section id="work" class="wrap">
-  <h2>Selected work</h2>
-  <div class="cards">
-    <div class="card">
-      <span class="metric">+54% subscriber growth</span>
-      <h3>Care.com LTV Transformation</h3>
-      <p>Led the shift from click-based to value-based bidding with a predictive LTV model built on BigQuery ML — reversing a 17% YoY subscriber decline into +54% premium subscriber growth with an 89% conversion-rate lift. Won a Google-wide analytics showcase.</p>
-    </div>
-    <div class="card">
-      <span class="metric">$6M incremental profit</span>
-      <h3>Turo Value-Based Bidding</h3>
-      <p>Aligned search investment with offline booking revenue using Bayesian structural time-series and causal impact analysis — driving value-based bidding adoption from 0% to 83%.</p>
-    </div>
-    <div class="card">
-      <span class="metric">67,000+ conversions</span>
-      <h3>GenAI Video Advertising Benchmark</h3>
-      <p>Led a first-of-its-kind A/B experiment proving AI-generated video ads can perform ROI-positive versus traditional production — cutting production costs ~99% and turnaround from months to minutes for a major travel brand.</p>
-    </div>
-    <div class="card">
-      <span class="metric">2.5x projected ROI</span>
-      <h3>MLB Vertex AI Business Case</h3>
-      <p>Built the multi-year ROI/TCO model behind a Vertex AI Site Search &amp; Browse deployment — projecting $4.8M in net incremental revenue and securing C-level buy-in.</p>
-    </div>
-    <div class="card">
-      <span class="metric">$300M+ in 2025</span>
-      <h3>Category Expansion Engine</h3>
-      <p>Founded a Center of Excellence that turns macroeconomic and LTV shifts into concrete expansion plays — an operationalized GTM engine across 200+ enterprise companies, targeting $600M+ in 2026.</p>
-    </div>
-    <div class="card">
-      <span class="metric">>60% significant lift</span>
-      <h3>Google-wide Incrementality Meta-Study</h3>
-      <p>Designed a measurement framework deploying Connected TV against performance KPIs across 20 enterprise advertisers — causally validating incremental value through user-based lift studies.</p>
-    </div>
-  </div>
-</section>
-
-<section id="experience" class="wrap">
-  <h2>Experience</h2>
-
-  <div class="role">
-    <div class="when">May 2025 – Present</div>
-    <div>
-      <h3>Principal Analytical Consultant II, Head of Category Expansion</h3>
-      <div class="org">Google · New York</div>
-      <p>A role created for me at Google: translating macroeconomic and LTV consumer shifts into profitable category-expansion strategies for CMOs and CEOs.</p>
-      <ul>
-        <li>Founded and scaled the Category Expansion Center of Excellence across multiple verticals — unlocking $300M+ in new category revenue in 2025 and operationalizing a GTM engine targeting $600M+ in 2026.</li>
-        <li>Designed and deployed scaled value-selling motions and opportunity-sizing tools for account teams covering 200+ enterprise companies.</li>
-        <li>Co-built LLM-powered analytics tooling on Gemini that automated search-term taxonomy and category-gap analysis, cutting manual analyst workload ~90%.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="role">
-    <div class="when">Jan 2025 – Feb 2026</div>
-    <div>
-      <h3>Principal, AI Value Creation — Cloud</h3>
-      <div class="org">Google · New York</div>
-      <p>Led AI value creation for Fortune 500 and category-leading brands across pharma, insurance, retail, and media — building the ROI/TCO models and business cases behind enterprise Gemini and Google Cloud deployments.</p>
-      <ul>
-        <li>Built a multi-year ROI/TCO model for an MLB Vertex AI Site Search &amp; Browse deployment, projecting up to 2.5x ROI.</li>
-        <li>Led a Gemini Enterprise deal cycle end-to-end to bring a novel GenAI video agent to market for a major travel brand — 67,000+ conversions and a $400K pilot commitment.</li>
-        <li>Lead author on a first-of-its-kind Google benchmark establishing that AI-generated video ads can perform ROI-positive versus traditional production.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="role">
-    <div class="when">Sep 2022 – May 2025</div>
-    <div>
-      <h3>Principal Analytical Consultant, Top Accounts</h3>
-      <div class="org">Google · New York</div>
-      <ul>
-        <li>Led executive AI summits and innovation labs, operationalizing AI pilots projected to deliver $56M in customer value across research synthesis, trend spotting, and ad copy optimization.</li>
-        <li>Built predictive-LTV (BigQuery ML) and value-based media-buying programs — driving an 89% conversion-rate lift and +54% premium subscriber growth for Care.com, and $6M in incremental profit for Turo.</li>
-        <li>Selected as Google's first IC Mastery Coach; delivered 20+ sales enablement sessions at 100% CSAT.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="role">
-    <div class="when">Mar 2024 – Jul 2024</div>
-    <div>
-      <h3>GTM Lead, VCs and Startups</h3>
-      <div class="org">Google · São Paulo, Brazil</div>
-      <ul>
-        <li>Selected for a competitive global rotation to build a scaled VC channel in Brazil.</li>
-        <li>Delivered 14 growth workshops for 13 high-potential startups in 6 weeks — $5.9M in new pipeline at a 94 NPS.</li>
-        <li>Delivered "Building Your AI Growth Machine," a featured talk at Valor, to Brazilian founders and C-level operators.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="role">
-    <div class="when">Sep 2021 – Oct 2022</div>
-    <div>
-      <h3>Advisor</h3>
-      <div class="org">CapitalG · New York</div>
-      <p>Led startup advisory and launched the Ads@CapitalG accelerator program for Google's growth-stage venture arm — driving 95% QoQ conversion growth for accelerator participants.</p>
-    </div>
-  </div>
-
-  <div class="role">
-    <div class="when">Sep 2019 – Sep 2022</div>
-    <div>
-      <h3>Senior Analytical Consultant, Top Accounts</h3>
-      <div class="org">Google · New York</div>
-      <ul>
-        <li>Supported Match.com and Vimeo executives through their IPOs and Angi through a multi-brand consolidation.</li>
-        <li>Delivered marketing technology for a home-services leader that drove $10M+ in annual EBITDA gains.</li>
-        <li>Designed causal experiments (geo-tests, incrementality studies), including a Google-wide meta-study with 15+ enterprise brands.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="role">
-    <div class="when">2017 – 2019</div>
-    <div>
-      <h3>Growth Product Manager · Paid Search Lead</h3>
-      <div class="org">Jet.com · Hoboken, NJ</div>
-      <p>Owned the acquisition-tech product roadmap and paid-search strategy — launching products and quantitative tests to optimize user acquisition, LTV, and marketing-stack ROI.</p>
-    </div>
-  </div>
-
-  <div class="role">
-    <div class="when">2015 – 2017</div>
-    <div>
-      <h3>Neuroscience Research Specialist</h3>
-      <div class="org">Princeton University</div>
-      <p>Conducted neuroscience research — building the foundation for a data-driven, experimental approach to decision-making under uncertainty.</p>
-    </div>
-  </div>
 </section>
 
 <section id="building" class="wrap">
-  <h2>Building</h2>
-  <p class="lede" style="margin-bottom:28px">Outside of Google, I'm an engineer at heart — I write production SQL and Python, and I ship independent products.</p>
+  <h2>What I'm building</h2>
+  <p class="lede" style="margin-bottom:28px">I ship things end to end — it keeps my advice honest. A few current and past builds:</p>
   <div class="cards">
     <div class="card">
+      <span class="status">Live</span>
+      <h3>Quantitative Trading System</h3>
+      <p>A fully automated futures trading and research operation: a backtesting engine with pre-registered experiments, nightly cloud verification runs, and a live execution stack trading index futures. Built to answer one question honestly — does the edge survive contact with real markets?</p>
+    </div>
+    <div class="card">
+      <span class="status">In progress</span>
+      <h3>GCP-native SaaS</h3>
+      <p>An AI-agent platform for home-services businesses, built cloud-native on GCP — OAuth-based API integrations, automated test coverage, and LTV analytics at the core. Applying what I've learned advising enterprises to a market I can serve directly.</p>
+    </div>
+    <div class="card">
+      <span class="status">Built &amp; sold</span>
       <h3>Trading Application — 1K+ DAUs</h3>
-      <p>Built and sold a trading application that grew to over 1,000 daily active users — real-time market levels for futures and equities traders.</p>
-    </div>
-    <div class="card">
-      <h3>Quantitative Trading Research</h3>
-      <p>Building an automated backtesting and strategy-research engine for futures markets, with nightly cloud verification runs and pre-registered experiments.</p>
-    </div>
-    <div class="card">
-      <h3>Data Platform</h3>
-      <p>Developing a data platform with OAuth-based API integrations and automated test coverage — bringing production engineering rigor to independent work.</p>
+      <p>Designed, launched, and sold a real-time market-levels tool for futures and equities traders. It grew past 1,000 daily active users — my first taste of building something strangers pay for and use every day.</p>
     </div>
   </div>
   <div class="chips">
-    <span class="chip">Python</span><span class="chip">SQL / BigQuery</span><span class="chip">Causal Inference</span>
-    <span class="chip">LTV Modeling</span><span class="chip">Vertex AI</span><span class="chip">Gemini</span>
-    <span class="chip">ROI / TCO Modeling</span><span class="chip">Experimentation</span><span class="chip">GTM Strategy</span>
+    <span class="chip">Python</span><span class="chip">SQL / BigQuery</span><span class="chip">GCP</span>
+    <span class="chip">Vertex AI</span><span class="chip">Gemini</span><span class="chip">Causal Inference</span>
+    <span class="chip">LTV Modeling</span><span class="chip">Experimentation</span><span class="chip">GTM Strategy</span>
+  </div>
+</section>
+
+<section id="journey" class="wrap">
+  <h2>The journey so far</h2>
+
+  <div class="story">
+    <div class="when">2019 – Present</div>
+    <div>
+      <h3>Google</h3>
+      <div class="org">Analytical Consultant → Principal → Head of Category Expansion</div>
+      <p>I joined Google to advise its largest advertisers on measurement and growth, and stayed because the problems kept getting bigger. Along the way I took a detour advising startups for CapitalG (Google's growth fund), won a global rotation to São Paulo to build a VC channel from scratch — fourteen workshops in six weeks, in a market I'd never worked, for founders I'd never met — and became the first IC Mastery Coach at Google, teaching other consultants how to do this work.</p>
+      <p>Eventually Google created a new role for me: Head of Category Expansion, showing CMOs and CEOs where their next markets are. These days I split my time between that and AI value creation — sitting with Fortune 500 leaders to figure out which AI investments are real, and building the business cases that get them deployed.</p>
+    </div>
+  </div>
+
+  <div class="story">
+    <div class="when">2017 – 2019</div>
+    <div>
+      <h3>Jet.com</h3>
+      <div class="org">Paid Search Lead → Growth Product Manager</div>
+      <p>I left academia for e-commerce hypergrowth and got a crash course in commercial reality. I started running paid search, then moved into product — where, despite having no engineering background, I ended up leading engineers through migrating the data systems behind half the company's sales. Jet taught me that I could learn any technical domain fast enough to ship in it, and that I loved doing exactly that.</p>
+    </div>
+  </div>
+
+  <div class="story">
+    <div class="when">2015 – 2017</div>
+    <div>
+      <h3>Princeton Neuroscience Institute</h3>
+      <div class="org">Research Specialist</div>
+      <p>My first job was helping a brand-new neuroscience lab get off the ground — designing experiments, building recording rigs, and teaching myself programming, CAD, and machining because someone had to. Studying decision-making under uncertainty turned out to be the perfect foundation for everything since: markets, marketing, and AI are all the same problem wearing different clothes.</p>
+    </div>
   </div>
 </section>
 
@@ -318,16 +203,20 @@
   <h2>What people say</h2>
   <div class="cards">
     <div class="card quote">
-      <p>"Most people who work near a technical discipline learn its vocabulary… A rare few learn the discipline itself. Greg Nowak belongs, without qualification, to the second group. Simply put, Greg is among the very best people I have ever managed."</p>
-      <div class="attrib"><b>Nima Oftadeh</b><span>VP of Marketing Science, The Trade Desk<br>(managed Greg at Google)</span></div>
+      <p>"Greg is the total package — brilliant IQ + world-class EQ. Greg is smart, humble, self-aware, deeply curious, highly quantitative and technical… Greg is an A++ player."</p>
+      <div class="attrib"><b>Micah Moreau</b><span>Managed Greg at Jet.com</span></div>
     </div>
     <div class="card quote">
-      <p>"Having managed numerous Product Managers throughout my career, I can say without hesitation that Greg stands out as one of the best. He was ranked the highest-performing Product Manager at his level."</p>
-      <div class="attrib"><b>Viral Sheth</b><span>VP of Digital Product &amp; Ecommerce Growth, Warby Parker<br>(managed Greg at Jet.com)</span></div>
+      <p>"Simply put, Greg has one of the strongest work ethics I've ever seen… many of the projects in the lab were successful because of Greg's commitment."</p>
+      <div class="attrib"><b>Tim Buschman</b><span>Professor of Neuroscience and Psychology, Princeton University</span></div>
     </div>
     <div class="card quote">
-      <p>"(Greg) you changed everything for us."</p>
-      <div class="attrib"><b>Marketing VP</b><span>Care.com, after a predictive-LTV program that won a Google-wide analytics showcase</span></div>
+      <p>"Hands-down one of the most talented professionals in the industry… He doesn't just manage workflows, he elevates the people around him."</p>
+      <div class="attrib"><b>Sylwia Golas</b><span>Senior Digital Marketing Strategist, Google</span></div>
+    </div>
+    <div class="card quote">
+      <p>"Greg was a high performer at Jet and will continue to be successful wherever he decides to work. He's someone who can wear a lot of different hats, which makes him a great addition to any team."</p>
+      <div class="attrib"><b>Viral Sheth</b><span>VP of Product at Warby Parker; managed Greg at Jet.com</span></div>
     </div>
   </div>
 </section>
